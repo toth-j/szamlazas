@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számlázás</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="stilusok.css">
+</head>
+<body>
+    <h1 class="text-center mt-3">Számlázási adatok</h1>
+    <form class="container" onsubmit="elkuld()">
+        <div class="row">
+            <div class="col-md">
+                <label for="vnev" class="form-label">Vezetéknév: </label>
+                <input type="text" id="vnev" name="vnev" class="form-control" required>        
+            </div>
+            <div class="col-md">
+                <label for="knev" class="form-label">Keresztnév: </label>
+                <input type="text" id="knev" name="knev" class="form-control" required>        
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-2">
+                <label for="irszam" class="form-label">Irányítószám: </label>
+                <input type="text" id="irszam" name="irszam" class="form-control" required>        
+            </div>
+            <div class="col-md-4">
+                <label for="varos" class="form-label">Város: </label>
+                <select id="varos" name="varos" class="form-control" required>
+                    <option value="">Válassz...</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Debrecen">Debrecen</option>
+                    <option value="Szeged">Szeged</option>
+                </select>        
+            </div>
+            <div class="col-md-6">
+                <label for="cim" class="form-label">Utca, házszám: </label>
+                <input type="text" id="cim" name="cim" class="form-control" required>        
+            </div>
+        </div>
+        <hr class="my-4">
+        <p>Szállítási mód:</p>
+        <div class="form-check ms-3">
+            <input type="radio" class="form-check-input" name="szallitas" id="futar" checked>
+            <label for="futar" class="form-check-label">Futár</label>
+        </div>
+        <div class="form-check ms-3">
+            <input type="radio" class="form-check-input" name="szallitas" id="posta">
+            <label for="posta" class="form-check-label">Posta</label>
+        </div>
+        <div class="form-check ms-3">
+            <input type="radio" class="form-check-input" name="szallitas" id="automata">
+            <label for="automata" class="form-check-label">Automata</label>
+        </div>
+
+        <hr class="my-4">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="feltetel" id="feltetel" required>
+            <label for="feltetel" class="form-check-label">Elolvastam a feltételeket</label>
+        </div>
+        <input type="submit" class="button btn-primary btn-lg mt-3" value="Küldés">
+    </form>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="szamlazas.js"></script>
+</body>
+</html>
