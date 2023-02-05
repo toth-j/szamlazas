@@ -1,5 +1,5 @@
 function elkuld(e) {
-    // e.preventDefault()
+    e.preventDefault()
     alert('Adatok elküldve')
     document.getElementById('adatok').reset()
     return false
